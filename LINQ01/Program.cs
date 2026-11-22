@@ -101,6 +101,18 @@ namespace LINQ01
             foreach (var item11 in q11)
                 Console.WriteLine(item11);
             #endregion
+
+            #region 12
+            //Q12
+            String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            var result12 = Arr.OrderBy(w => w.Length).ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+            foreach(var sort3 in result12)
+            {
+                Console.WriteLine(sort3);
+            }
+            #endregion
+
+
         }
 
     }
