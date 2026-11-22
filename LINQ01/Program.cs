@@ -54,7 +54,11 @@ namespace LINQ01
                 Console.WriteLine(item);
             }
 
-            
+            //Q07
+            var q7 = Source.ProductList.Select((p, index) => $"{index + 1}. {p.ProductName}");
+
+            foreach (var line in q7)
+                Console.WriteLine(line);
         }
     }
 }
