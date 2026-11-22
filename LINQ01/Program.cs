@@ -47,9 +47,14 @@ namespace LINQ01
                 Console.WriteLine(stock);
             }
 
+            //Q06
+            var Proudect1 = Source.ProductList.Select(P => new { P.ProductName, P.UnitPrice, StockStatus = P.UnitsInStock > 0 ? "Available" : "Out of Stock" });
+            foreach(var item in Proudect1)
+            {
+                Console.WriteLine(item);
+            }
+
             
-
-
         }
     }
 }
