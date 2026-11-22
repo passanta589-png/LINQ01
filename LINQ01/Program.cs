@@ -59,6 +59,17 @@ namespace LINQ01
 
             foreach (var line in q7)
                 Console.WriteLine(line);
+
+            #region 08
+            //Q08
+
+            var result08 = Source.ProductList.OrderBy(P => P.Category).ThenByDescending(P => P.UnitPrice);
+             foreach (var sort in result08)
+                Console.WriteLine(sort);
+            #endregion
+
+
         }
+
     }
 }
