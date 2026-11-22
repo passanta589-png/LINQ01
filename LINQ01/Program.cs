@@ -112,7 +112,18 @@ namespace LINQ01
             }
             #endregion
 
+            #region 13
+            //Q13
+            string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
+            var q13 = digits
+                .Where(d => d.Length > 1 && d[1] == 'i')
+                .Reverse()
+                .ToList();
+
+            foreach (var d in q13)
+                Console.WriteLine(d);
+            #endregion
         }
 
     }
