@@ -1,5 +1,9 @@
 ﻿using LINQ.Models;
 using LINQ.DataSources;
+using LINQ.Models;
+{
+    
+}
 
 namespace LINQ01
 {
@@ -75,6 +79,20 @@ namespace LINQ01
             {
                 Console.WriteLine(sort2);
             }
+            #endregion
+
+            #region 10
+            //Q10
+            var result10 = from c in Customer
+                           from o in Order
+                           where o.Orderdate.Year >= 1997
+                           select new { c.CustomerId, o.OrderDate };
+
+            foreach(var models in result10)
+            {
+                Console.WriteLine(models);
+            }
+
             #endregion
         }
 
