@@ -32,6 +32,16 @@ namespace LINQ01
                 Console.WriteLine(items);
             }
 
+            //Q04
+            var result4 = Source.ProductList
+                        .Where(P => P.UnitPrice >= 10 && P.UnitPrice <= 30);
+            foreach (var price in result4)
+            {
+                Console.WriteLine(price);
+            }
+
+
+
 
         }
     }
