@@ -83,16 +83,23 @@ namespace LINQ01
 
             #region 10
             //Q10
-            var result10 = from c in Customer
-                           from o in Order
-                           where o.Orderdate.Year >= 1997
-                           select new { c.CustomerId, o.OrderDate };
+            //  var result10 = from c in Customer
+            //                 from o in Order
+            //                where o.Orderdate.Year >= 1997
+            //                 select new { c.CustomerId, o.OrderDate };
 
-            foreach(var models in result10)
-            {
-                Console.WriteLine(models);
-            }
+            //  foreach(var models in result10)
+            //  {
+            //      Console.WriteLine(models);
+            //  }
 
+            #endregion
+            #region 11
+            //Q11
+            var q11 =Source.ProductList.Select((p, idx) => new { Position = idx + 1, p.ProductName });
+
+            foreach (var item11 in q11)
+                Console.WriteLine(item11);
             #endregion
         }
 
