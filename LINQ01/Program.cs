@@ -68,7 +68,14 @@ namespace LINQ01
                 Console.WriteLine(sort);
             #endregion
 
-
+            #region 09
+            //Q09
+            var result09 = Source.ProductList.Where(P => P.Category == "Beverages").OrderByDescending(P => P.UnitsInStock).Select(P => new { P.ProductName, P.UnitsInStock });
+            foreach(var sort2 in result09)
+            {
+                Console.WriteLine(sort2);
+            }
+            #endregion
         }
 
     }
