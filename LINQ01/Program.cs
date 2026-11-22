@@ -40,7 +40,14 @@ namespace LINQ01
                 Console.WriteLine(price);
             }
 
+            //Q05
+            var result05 = Source.ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Condiments");
+            foreach(var stock in result05)
+            {
+                Console.WriteLine(stock);
+            }
 
+            
 
 
         }
